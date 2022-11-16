@@ -1,0 +1,39 @@
+{
+  "include": ["src", "examples/app.test.ts"],
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Projects */
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+
+    /* Language and Environment */
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "moduleDetection": "auto",
+
+    /* Modules */
+    "module": "commonjs",
+
+    /* Emit */
+    "outDir": "./dist",
+    "importsNotUsedAsValues": "error",
+    "downlevelIteration": false,
+    "noEmitOnError": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitOverride": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}
