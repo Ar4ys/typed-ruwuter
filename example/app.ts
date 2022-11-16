@@ -13,7 +13,12 @@ interface WithIdParam {
 const paramsValidator = middlewareWrapper<[], [WithIdParam]>(request => {
   console.log('Validating request params: `id` must be number')
 
-  if (Number.isNaN(Number(request.params.id)))
+  if (
+    !request.params ||
+    typeof request.params !== 'object' ||
+    !('id' in request.params) ||
+    Number.isNaN(Number(request.params.id))
+  )
     throw new Error('Validation Error: param `id` must be number')
 
   return {

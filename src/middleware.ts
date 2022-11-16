@@ -50,28 +50,9 @@ export interface Mutations<T extends unknown[]> {
   _: MergeMutationsList<T>
 }
 
-// type A = Remap<DeepMergeRecordsTuple<[
-//   { a?: unknown, b: unknown },
-//   { a: number, b: { c?: number, d: null } },
-//   { d: Date, b: { d: Date } }
-// ]>>
-
-type C = MergeRecordsOrReturnLast<[string, string], [number, string]>
-// type C = ('a' | 'b') | ('a' | 'c' | 'b');
-type D = number | undefined extends undefined ? true : false
-// type B = A['b']
-// const a = {} as A;
-// delete a.b.c;
-
-// -----------------------------------------------------------------------------
-
-export function todo(message?: string): never {
-  throw new Error(message ?? 'Todo')
-}
-
 const MiddlewareOutType = Symbol('MiddlewareOutBrand')
 
-export type UnknownRequest = Request<Record<string, string>, unknown, unknown, unknown>
+export type UnknownRequest = Request<unknown, unknown, unknown, unknown>
 
 export interface Middleware<
   In extends Mutations<Record<any, any>[]>,
