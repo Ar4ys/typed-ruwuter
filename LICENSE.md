@@ -1,6 +1,6 @@
 # [ISC License](https://spdx.org/licenses/ISC)
 
-Copyright (c) 2022, Ar4ys <ar4ys@proton.me> (https://github.com/Ar4ys)
+Copyright (c) 2022, Ar4ys <ar4ys@proton.me>
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 

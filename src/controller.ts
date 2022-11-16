@@ -1,8 +1,11 @@
 import { RequestHandler, Router, RouterOptions } from 'express'
-import type { Middleware, Mutations, todo } from './middleware'
+import type { Middleware, Mutations } from './middleware'
 
-// This is an immutable abstraction over an actual express router.
-// In future, however, we can implement our own router from scratch (only ~1k lines, see https://github.com/pillarjs/router)
+/**
+ * This is an immutable wrapper over an actual express router.
+ * In future, however, we may consider implementing our own router from scratch
+ * (only ~1k lines, {@link https://github.com/pillarjs/router Express 5.0 Router})
+ */
 export class ControllerBuilder<M extends Record<any, any>[] = []> {
   private router: Router
 
